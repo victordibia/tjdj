@@ -1,5 +1,9 @@
+// var pigpio = require('pigpio')
+// pigpio.initialize();
 var config = require('./config');  // gets our username and passwords from the config.js files
 var watson = require('watson-developer-cloud');
+var Sound = require('node-aplay');
+
 var speech_to_text = watson.speech_to_text({
   username: config.STTUsername,
   password: config.STTPassword,
@@ -60,32 +64,63 @@ function getSpotify(){
 
 
 function downloadFile(url){
-  var dest = "musci.wav"
+  var dest = "preview.mp3"
   var file = fs.createWriteStream(dest);
   var donwloadrequest = request.get(url);
 
-    // verify response code
-    donwloadrequest.on('response', function(response) {
-        if (response.statusCode !== 200) {
-            return cb('Response status was ' + response.statusCode);
-        }
-    });
+  // verify response code
+  donwloadrequest.on('response', function(response) {
+    if (response.statusCode !== 200) {
+      return cb('Response status was ' + response.statusCode);
+    }
+  });
 
-    // check for request errors
-    donwloadrequest.on('error', function (err) {
-        fs.unlink(dest);
-    });
-    donwloadrequest.pipe(file);
-    file.on('finish', function() {
-        file.close();
-        playSound();
-    });
+  // check for request errors
+  donwloadrequest.on('error', function (err) {
+    fs.unlink(dest);
+  });
+  donwloadrequest.pipe(file);
+  file.on('finish', function() {
+    file.close();
+    //playSound();
+    converttoWav("") ;
+  });
 
-    file.on('error', function(err) { // Handle errors
-        fs.unlink(dest); // Delete the file async. (But we don't check the result)
-    });
+  file.on('error', function(err) { // Handle errors
+    fs.unlink(dest); // Delete the file async. (But we don't check the result)
+  });
 }
 
-function playSound(){
+/**
+* [converttoWav converts file from Mp3 to wave. Needs to have mpg321 installed]
+* @return {[type]} [description]
+*/
 
+const spawn = require('child_process').spawn;
+function converttoWav(inputfile){
+
+  const ls = spawn('mpg321', ['preview.mp3', 'preview.wav']);
+
+  ls.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
+
+  ls.stderr.on('data', (data) => {
+    console.log(`stderr: ${data}`);
+  });
+
+  ls.on('close', (code) => {
+    console.log(`child process exited with code ${code}`);
+  });
+}
+
+var isplaying = false ;
+function playSound(soundfile){
+  isplaying = true ;
+  music = new Sound(soundfile);
+  music.play();
+  music.on('complete', function () {
+    console.log('Done with music playback!');
+    isplaying = false;
+  });
 }

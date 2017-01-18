@@ -2,6 +2,20 @@
 Fun speech-based app to get TJBot playing (and dancing to) song snippets using Watson Apis and the Spotify apis
 
 
+##Running
+
+Start the application. (Note: you need sudo access)
+
+    sudo node tjdj.js     
+
+Then you should be able to speak to the microphone and ask your TJBot to play a song
+
+    play song smooth criminal by michael jackson
+    play song
+
+For the dance command, your robot processes wav files in the sounds folder. Please ensure you have a .wav file there and set that as your sound file.
+
+
 Dependencies List
 
 - Watson Developer Cloud : [Watson Speech to Text](https://www.ibm.com/watson/developercloud/speech-to-text.html), [Watson Conversation](https://www.ibm.com/watson/developercloud/conversation.html), and [Watson Text to Speech](https://www.ibm.com/watson/developercloud/text-to-speech.html).

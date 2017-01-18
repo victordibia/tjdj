@@ -1,0 +1,861 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/Users/victordibia/.npm-packages/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-save',
+1 verbose cli   'pigpio' ]
+2 info using npm@3.10.5
+3 info using node@v6.2.2
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData pigpio
+8 silly fetchNamedPackageData pigpio
+9 silly mapToRegistry name pigpio
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'pigpio',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'pigpio',
+12 silly mapToRegistry   name: 'pigpio',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/pigpio
+14 verbose request uri https://registry.npmjs.org/pigpio
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 12:35:05 PM
+17 verbose request id ba10b518fc38ae13
+18 http request GET https://registry.npmjs.org/pigpio
+19 http 200 https://registry.npmjs.org/pigpio
+20 verbose headers { server: 'nginx/1.10.1',
+20 verbose headers   'content-type': 'application/json',
+20 verbose headers   'last-modified': 'Thu, 08 Dec 2016 08:20:49 GMT',
+20 verbose headers   etag: 'W/"584917e1-7f66"',
+20 verbose headers   'content-encoding': 'gzip',
+20 verbose headers   'cache-control': 'max-age=300',
+20 verbose headers   'content-length': '5973',
+20 verbose headers   'accept-ranges': 'bytes',
+20 verbose headers   date: 'Wed, 18 Jan 2017 17:35:05 GMT',
+20 verbose headers   via: '1.1 varnish',
+20 verbose headers   age: '0',
+20 verbose headers   connection: 'keep-alive',
+20 verbose headers   'x-served-by': 'cache-sjc3143-SJC',
+20 verbose headers   'x-cache': 'HIT',
+20 verbose headers   'x-cache-hits': '1',
+20 verbose headers   'x-timer': 'S1484760905.604888,VS0,VE20',
+20 verbose headers   vary: 'Accept-Encoding' }
+21 silly get cb [ 200,
+21 silly get   { server: 'nginx/1.10.1',
+21 silly get     'content-type': 'application/json',
+21 silly get     'last-modified': 'Thu, 08 Dec 2016 08:20:49 GMT',
+21 silly get     etag: 'W/"584917e1-7f66"',
+21 silly get     'content-encoding': 'gzip',
+21 silly get     'cache-control': 'max-age=300',
+21 silly get     'content-length': '5973',
+21 silly get     'accept-ranges': 'bytes',
+21 silly get     date: 'Wed, 18 Jan 2017 17:35:05 GMT',
+21 silly get     via: '1.1 varnish',
+21 silly get     age: '0',
+21 silly get     connection: 'keep-alive',
+21 silly get     'x-served-by': 'cache-sjc3143-SJC',
+21 silly get     'x-cache': 'HIT',
+21 silly get     'x-cache-hits': '1',
+21 silly get     'x-timer': 'S1484760905.604888,VS0,VE20',
+21 silly get     vary: 'Accept-Encoding' } ]
+22 verbose get saving pigpio to /Users/victordibia/.npm/registry.npmjs.org/pigpio/.cache.json
+23 verbose correctMkdir /Users/victordibia/.npm correctMkdir not in flight; initializing
+24 silly install normalizeTree
+25 silly loadCurrentTree Finishing
+26 silly loadIdealTree Starting
+27 silly install loadIdealTree
+28 silly cloneCurrentTree Starting
+29 silly install cloneCurrentTreeToIdealTree
+30 silly cloneCurrentTree Finishing
+31 silly loadShrinkwrap Starting
+32 silly install loadShrinkwrap
+33 silly loadShrinkwrap Finishing
+34 silly loadAllDepsIntoIdealTree Starting
+35 silly install loadAllDepsIntoIdealTree
+36 silly resolveWithNewModule pigpio@0.4.0 checking installable status
+37 silly cache add args [ 'pigpio', null ]
+38 verbose cache add spec pigpio
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'pigpio',
+39 silly cache add   scope: null,
+39 silly cache add   escapedName: 'pigpio',
+39 silly cache add   name: 'pigpio',
+39 silly cache add   rawSpec: '',
+39 silly cache add   spec: 'latest',
+39 silly cache add   type: 'tag' }
+40 silly addNamed pigpio@latest
+41 verbose addNamed "latest" is being treated as a dist-tag for pigpio
+42 info addNameTag [ 'pigpio', 'latest' ]
+43 silly mapToRegistry name pigpio
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry data Result {
+46 silly mapToRegistry   raw: 'pigpio',
+46 silly mapToRegistry   scope: null,
+46 silly mapToRegistry   escapedName: 'pigpio',
+46 silly mapToRegistry   name: 'pigpio',
+46 silly mapToRegistry   rawSpec: '',
+46 silly mapToRegistry   spec: 'latest',
+46 silly mapToRegistry   type: 'tag' }
+47 silly mapToRegistry uri https://registry.npmjs.org/pigpio
+48 verbose addNameTag registry:https://registry.npmjs.org/pigpio not in flight; fetching
+49 verbose get https://registry.npmjs.org/pigpio not expired, no request
+50 silly addNameTag next cb for pigpio with tag latest
+51 silly addNamed pigpio@0.4.0
+52 verbose addNamed "0.4.0" is a plain semver version for pigpio
+53 silly cache afterAdd pigpio@0.4.0
+54 verbose afterAdd /Users/victordibia/.npm/pigpio/0.4.0/package/package.json not in flight; writing
+55 verbose correctMkdir /Users/victordibia/.npm correctMkdir not in flight; initializing
+56 verbose afterAdd /Users/victordibia/.npm/pigpio/0.4.0/package/package.json written
+57 silly fetchNamedPackageData nan
+58 silly mapToRegistry name nan
+59 silly mapToRegistry using default registry
+60 silly mapToRegistry registry https://registry.npmjs.org/
+61 silly mapToRegistry data Result {
+61 silly mapToRegistry   raw: 'nan',
+61 silly mapToRegistry   scope: null,
+61 silly mapToRegistry   escapedName: 'nan',
+61 silly mapToRegistry   name: 'nan',
+61 silly mapToRegistry   rawSpec: '',
+61 silly mapToRegistry   spec: 'latest',
+61 silly mapToRegistry   type: 'tag' }
+62 silly mapToRegistry uri https://registry.npmjs.org/nan
+63 verbose request uri https://registry.npmjs.org/nan
+64 verbose request no auth needed
+65 info attempt registry request try #1 at 12:35:05 PM
+66 verbose etag W/"585acecf-1d7db"
+67 verbose lastModified Wed, 21 Dec 2016 18:49:51 GMT
+68 http request GET https://registry.npmjs.org/nan
+69 http 304 https://registry.npmjs.org/nan
+70 verbose headers { date: 'Wed, 18 Jan 2017 17:35:05 GMT',
+70 verbose headers   via: '1.1 varnish',
+70 verbose headers   'cache-control': 'max-age=300',
+70 verbose headers   etag: 'W/"585acecf-1d7db"',
+70 verbose headers   age: '103',
+70 verbose headers   connection: 'keep-alive',
+70 verbose headers   'x-served-by': 'cache-sjc3143-SJC',
+70 verbose headers   'x-cache': 'HIT',
+70 verbose headers   'x-cache-hits': '2',
+70 verbose headers   'x-timer': 'S1484760905.858361,VS0,VE0',
+70 verbose headers   vary: 'Accept-Encoding' }
+71 silly get cb [ 304,
+71 silly get   { date: 'Wed, 18 Jan 2017 17:35:05 GMT',
+71 silly get     via: '1.1 varnish',
+71 silly get     'cache-control': 'max-age=300',
+71 silly get     etag: 'W/"585acecf-1d7db"',
+71 silly get     age: '103',
+71 silly get     connection: 'keep-alive',
+71 silly get     'x-served-by': 'cache-sjc3143-SJC',
+71 silly get     'x-cache': 'HIT',
+71 silly get     'x-cache-hits': '2',
+71 silly get     'x-timer': 'S1484760905.858361,VS0,VE0',
+71 silly get     vary: 'Accept-Encoding' } ]
+72 verbose etag https://registry.npmjs.org/nan from cache
+73 verbose get saving nan to /Users/victordibia/.npm/registry.npmjs.org/nan/.cache.json
+74 verbose correctMkdir /Users/victordibia/.npm correctMkdir not in flight; initializing
+75 silly resolveWithNewModule nan@2.4.0 checking installable status
+76 silly cache add args [ 'nan@~2.4.0', null ]
+77 verbose cache add spec nan@~2.4.0
+78 silly cache add parsed spec Result {
+78 silly cache add   raw: 'nan@~2.4.0',
+78 silly cache add   scope: null,
+78 silly cache add   escapedName: 'nan',
+78 silly cache add   name: 'nan',
+78 silly cache add   rawSpec: '~2.4.0',
+78 silly cache add   spec: '>=2.4.0 <2.5.0',
+78 silly cache add   type: 'range' }
+79 silly addNamed nan@>=2.4.0 <2.5.0
+80 verbose addNamed ">=2.4.0 <2.5.0" is a valid semver range for nan
+81 silly addNameRange { name: 'nan', range: '>=2.4.0 <2.5.0', hasData: false }
+82 silly mapToRegistry name nan
+83 silly mapToRegistry using default registry
+84 silly mapToRegistry registry https://registry.npmjs.org/
+85 silly mapToRegistry data Result {
+85 silly mapToRegistry   raw: 'nan',
+85 silly mapToRegistry   scope: null,
+85 silly mapToRegistry   escapedName: 'nan',
+85 silly mapToRegistry   name: 'nan',
+85 silly mapToRegistry   rawSpec: '',
+85 silly mapToRegistry   spec: 'latest',
+85 silly mapToRegistry   type: 'tag' }
+86 silly mapToRegistry uri https://registry.npmjs.org/nan
+87 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+88 verbose get https://registry.npmjs.org/nan not expired, no request
+89 silly addNameRange number 2 { name: 'nan', range: '>=2.4.0 <2.5.0', hasData: true }
+90 silly addNameRange versions [ 'nan',
+90 silly addNameRange   [ '0.3.0-wip',
+90 silly addNameRange     '0.3.0-wip2',
+90 silly addNameRange     '0.3.0',
+90 silly addNameRange     '0.3.1',
+90 silly addNameRange     '0.3.2',
+90 silly addNameRange     '0.4.0',
+90 silly addNameRange     '0.4.1',
+90 silly addNameRange     '0.4.2',
+90 silly addNameRange     '0.4.3',
+90 silly addNameRange     '0.4.4',
+90 silly addNameRange     '0.5.0',
+90 silly addNameRange     '0.5.1',
+90 silly addNameRange     '0.5.2',
+90 silly addNameRange     '0.6.0',
+90 silly addNameRange     '0.7.0',
+90 silly addNameRange     '0.7.1',
+90 silly addNameRange     '0.8.0',
+90 silly addNameRange     '1.0.0',
+90 silly addNameRange     '1.1.0',
+90 silly addNameRange     '1.1.1',
+90 silly addNameRange     '1.1.2',
+90 silly addNameRange     '1.2.0',
+90 silly addNameRange     '1.3.0',
+90 silly addNameRange     '1.4.0',
+90 silly addNameRange     '1.4.1',
+90 silly addNameRange     '1.5.0',
+90 silly addNameRange     '1.4.2',
+90 silly addNameRange     '1.4.3',
+90 silly addNameRange     '1.5.1',
+90 silly addNameRange     '1.5.2',
+90 silly addNameRange     '1.6.0',
+90 silly addNameRange     '1.5.3',
+90 silly addNameRange     '1.6.1',
+90 silly addNameRange     '1.6.2',
+90 silly addNameRange     '1.7.0',
+90 silly addNameRange     '1.8.0',
+90 silly addNameRange     '1.8.1',
+90 silly addNameRange     '1.8.2',
+90 silly addNameRange     '1.8.3',
+90 silly addNameRange     '1.8.4',
+90 silly addNameRange     '1.9.0',
+90 silly addNameRange     '2.0.0',
+90 silly addNameRange     '2.0.1',
+90 silly addNameRange     '2.0.2',
+90 silly addNameRange     '2.0.3',
+90 silly addNameRange     '2.0.4',
+90 silly addNameRange     '2.0.5',
+90 silly addNameRange     '2.0.6',
+90 silly addNameRange     '2.0.7',
+90 silly addNameRange     '2.0.8',
+90 silly addNameRange     '2.0.9',
+90 silly addNameRange     '2.1.0',
+90 silly addNameRange     '2.2.0',
+90 silly addNameRange     '2.2.1',
+90 silly addNameRange     '2.3.0',
+90 silly addNameRange     '2.3.1',
+90 silly addNameRange     '2.3.2',
+90 silly addNameRange     '2.3.3',
+90 silly addNameRange     '2.3.4',
+90 silly addNameRange     '2.3.5',
+90 silly addNameRange     '2.4.0',
+90 silly addNameRange     '2.5.0' ] ]
+91 silly addNamed nan@2.4.0
+92 verbose addNamed "2.4.0" is a plain semver version for nan
+93 silly cache afterAdd nan@2.4.0
+94 verbose afterAdd /Users/victordibia/.npm/nan/2.4.0/package/package.json not in flight; writing
+95 verbose correctMkdir /Users/victordibia/.npm correctMkdir not in flight; initializing
+96 verbose afterAdd /Users/victordibia/.npm/nan/2.4.0/package/package.json written
+97 silly loadAllDepsIntoIdealTree Finishing
+98 silly loadIdealTree Finishing
+99 silly currentTree tjdj@1.0.0
+99 silly currentTree ├── aac@0.1.3
+99 silly currentTree ├── abc@0.5.1
+99 silly currentTree ├── alac@0.1.0
+99 silly currentTree ├── ansi-regex@2.1.1
+99 silly currentTree ├── ansi-styles@2.2.1
+99 silly currentTree ├── asn1@0.2.3
+99 silly currentTree ├── assert-plus@0.2.0
+99 silly currentTree ├── assertion-error@1.0.0
+99 silly currentTree ├── async@2.1.4
+99 silly currentTree ├── asynckit@0.4.0
+99 silly currentTree ├─┬ audiobuffer@0.2.0
+99 silly currentTree │ └── underscore@1.4.4
+99 silly currentTree ├── av@0.4.9
+99 silly currentTree ├── aws-sign2@0.6.0
+99 silly currentTree ├── aws4@1.5.0
+99 silly currentTree ├── bcrypt-pbkdf@1.0.0
+99 silly currentTree ├── bignumber.js@1.1.1
+99 silly currentTree ├── bindings@1.2.1
+99 silly currentTree ├── bl@1.0.3
+99 silly currentTree ├── bluebird@2.11.0
+99 silly currentTree ├── boom@2.10.1
+99 silly currentTree ├── caseless@0.11.0
+99 silly currentTree ├── chai@1.7.2
+99 silly currentTree ├── chalk@1.1.3
+99 silly currentTree ├── coffee-script@1.7.1
+99 silly currentTree ├── coffeeify@0.6.0
+99 silly currentTree ├── combined-stream@1.0.5
+99 silly currentTree ├── commander@2.9.0
+99 silly currentTree ├── convert-source-map@0.3.5
+99 silly currentTree ├── cookie@0.3.1
+99 silly currentTree ├── core-util-is@1.0.2
+99 silly currentTree ├── cryptiles@2.0.5
+99 silly currentTree ├── csv-stringify@1.0.4
+99 silly currentTree ├── ctype@0.5.3
+99 silly currentTree ├─┬ dashdash@1.14.1
+99 silly currentTree │ └── assert-plus@1.0.0
+99 silly currentTree ├── debug@2.6.0
+99 silly currentTree ├── delayed-stream@1.0.0
+99 silly currentTree ├── duplexer@0.1.1
+99 silly currentTree ├── ecc-jsbn@0.1.1
+99 silly currentTree ├── escape-string-regexp@1.0.5
+99 silly currentTree ├── extend@3.0.0
+99 silly currentTree ├── extsprintf@1.0.2
+99 silly currentTree ├── flac@0.3.0
+99 silly currentTree ├── for-in@0.1.6
+99 silly currentTree ├── for-own@0.1.4
+99 silly currentTree ├── forever-agent@0.6.1
+99 silly currentTree ├── form-data@2.1.2
+99 silly currentTree ├── fsa@0.5.1
+99 silly currentTree ├── generate-function@2.0.0
+99 silly currentTree ├── generate-object-property@1.2.0
+99 silly currentTree ├─┬ getpass@0.1.6
+99 silly currentTree │ └── assert-plus@1.0.0
+99 silly currentTree ├── graceful-readlink@1.0.1
+99 silly currentTree ├── har-validator@2.0.6
+99 silly currentTree ├── has-ansi@2.0.0
+99 silly currentTree ├── hawk@3.1.3
+99 silly currentTree ├── hnp@0.0.1
+99 silly currentTree ├── hoek@2.16.3
+99 silly currentTree ├── http-signature@1.1.1
+99 silly currentTree ├── httperror@0.2.3
+99 silly currentTree ├── inherits@2.0.3
+99 silly currentTree ├── is-extendable@0.1.1
+99 silly currentTree ├── is-my-json-valid@2.15.0
+99 silly currentTree ├── is-property@1.0.2
+99 silly currentTree ├── is-typedarray@1.0.0
+99 silly currentTree ├── isarray@1.0.0
+99 silly currentTree ├── isobject@2.1.0
+99 silly currentTree ├── isstream@0.1.2
+99 silly currentTree ├── jodid25519@1.0.2
+99 silly currentTree ├── jsbn@0.1.0
+99 silly currentTree ├── json-bigint@0.1.4
+99 silly currentTree ├── json-schema@0.2.3
+99 silly currentTree ├── json-stringify-safe@5.0.1
+99 silly currentTree ├── jsonparse@1.3.0
+99 silly currentTree ├── jsonpointer@4.0.1
+99 silly currentTree ├── JSONStream@1.0.7
+99 silly currentTree ├── jsprim@1.3.1
+99 silly currentTree ├── lodash.get@4.4.2
+99 silly currentTree ├── lodash@4.17.4
+99 silly currentTree ├── mime-db@1.26.0
+99 silly currentTree ├── mime-types@2.1.14
+99 silly currentTree ├── mkdirp@0.3.5
+99 silly currentTree ├── mp3@0.1.0
+99 silly currentTree ├── ms@0.7.2
+99 silly currentTree ├── nan@2.5.0
+99 silly currentTree ├── node-aplay@1.0.3
+99 silly currentTree ├── oauth-sign@0.8.2
+99 silly currentTree ├── object.omit@2.0.1
+99 silly currentTree ├── object.pick@1.2.0
+99 silly currentTree ├─┬ pcm-boilerplate@0.1.1
+99 silly currentTree │ ├── async@0.2.10
+99 silly currentTree │ └── underscore@1.4.4
+99 silly currentTree ├── pinkie-promise@2.0.1
+99 silly currentTree ├── pinkie@2.0.4
+99 silly currentTree ├── process-nextick-args@1.0.7
+99 silly currentTree ├── punycode@1.4.1
+99 silly currentTree ├── qs@6.3.0
+99 silly currentTree ├── readable-stream@2.0.6
+99 silly currentTree ├── request@2.79.0
+99 silly currentTree ├── sntp@1.0.9
+99 silly currentTree ├─┬ solr-client@0.6.0
+99 silly currentTree │ ├── asn1@0.1.11
+99 silly currentTree │ ├── assert-plus@0.1.5
+99 silly currentTree │ ├── aws-sign2@0.5.0
+99 silly currentTree │ ├── form-data@1.0.1
+99 silly currentTree │ ├── har-validator@1.8.0
+99 silly currentTree │ ├── http-signature@0.11.0
+99 silly currentTree │ ├── node-uuid@1.4.7
+99 silly currentTree │ ├── qs@5.1.0
+99 silly currentTree │ └── request@2.63.0
+99 silly currentTree ├── speaker@0.3.0
+99 silly currentTree ├─┬ sshpk@1.10.2
+99 silly currentTree │ └── assert-plus@1.0.0
+99 silly currentTree ├── string_decoder@0.10.31
+99 silly currentTree ├── string@3.3.3
+99 silly currentTree ├── stringstream@0.0.5
+99 silly currentTree ├── strip-ansi@3.0.1
+99 silly currentTree ├── supports-color@2.0.0
+99 silly currentTree ├── through@2.3.8
+99 silly currentTree ├── tough-cookie@2.3.2
+99 silly currentTree ├── tunnel-agent@0.4.3
+99 silly currentTree ├── tweetnacl@0.14.5
+99 silly currentTree ├── typedarray-to-buffer@3.1.2
+99 silly currentTree ├── underscore@1.8.3
+99 silly currentTree ├── util-deprecate@1.0.2
+99 silly currentTree ├── uuid@3.0.1
+99 silly currentTree ├── vcap_services@0.2.0
+99 silly currentTree ├── verror@1.3.6
+99 silly currentTree ├── watson-developer-cloud@2.15.2
+99 silly currentTree ├─┬ web-audio-api@0.2.2
+99 silly currentTree │ └── async@0.9.2
+99 silly currentTree ├── websocket@1.0.24
+99 silly currentTree ├── xtend@4.0.1
+99 silly currentTree └── yaeti@0.0.6
+100 silly idealTree tjdj@1.0.0
+100 silly idealTree ├── aac@0.1.3
+100 silly idealTree ├── abc@0.5.1
+100 silly idealTree ├── alac@0.1.0
+100 silly idealTree ├── ansi-regex@2.1.1
+100 silly idealTree ├── ansi-styles@2.2.1
+100 silly idealTree ├── asn1@0.2.3
+100 silly idealTree ├── assert-plus@0.2.0
+100 silly idealTree ├── assertion-error@1.0.0
+100 silly idealTree ├── async@2.1.4
+100 silly idealTree ├── asynckit@0.4.0
+100 silly idealTree ├─┬ audiobuffer@0.2.0
+100 silly idealTree │ └── underscore@1.4.4
+100 silly idealTree ├── av@0.4.9
+100 silly idealTree ├── aws-sign2@0.6.0
+100 silly idealTree ├── aws4@1.5.0
+100 silly idealTree ├── bcrypt-pbkdf@1.0.0
+100 silly idealTree ├── bignumber.js@1.1.1
+100 silly idealTree ├── bindings@1.2.1
+100 silly idealTree ├── bl@1.0.3
+100 silly idealTree ├── bluebird@2.11.0
+100 silly idealTree ├── boom@2.10.1
+100 silly idealTree ├── caseless@0.11.0
+100 silly idealTree ├── chai@1.7.2
+100 silly idealTree ├── chalk@1.1.3
+100 silly idealTree ├── coffee-script@1.7.1
+100 silly idealTree ├── coffeeify@0.6.0
+100 silly idealTree ├── combined-stream@1.0.5
+100 silly idealTree ├── commander@2.9.0
+100 silly idealTree ├── convert-source-map@0.3.5
+100 silly idealTree ├── cookie@0.3.1
+100 silly idealTree ├── core-util-is@1.0.2
+100 silly idealTree ├── cryptiles@2.0.5
+100 silly idealTree ├── csv-stringify@1.0.4
+100 silly idealTree ├── ctype@0.5.3
+100 silly idealTree ├─┬ dashdash@1.14.1
+100 silly idealTree │ └── assert-plus@1.0.0
+100 silly idealTree ├── debug@2.6.0
+100 silly idealTree ├── delayed-stream@1.0.0
+100 silly idealTree ├── duplexer@0.1.1
+100 silly idealTree ├── ecc-jsbn@0.1.1
+100 silly idealTree ├── escape-string-regexp@1.0.5
+100 silly idealTree ├── extend@3.0.0
+100 silly idealTree ├── extsprintf@1.0.2
+100 silly idealTree ├── flac@0.3.0
+100 silly idealTree ├── for-in@0.1.6
+100 silly idealTree ├── for-own@0.1.4
+100 silly idealTree ├── forever-agent@0.6.1
+100 silly idealTree ├── form-data@2.1.2
+100 silly idealTree ├── fsa@0.5.1
+100 silly idealTree ├── generate-function@2.0.0
+100 silly idealTree ├── generate-object-property@1.2.0
+100 silly idealTree ├─┬ getpass@0.1.6
+100 silly idealTree │ └── assert-plus@1.0.0
+100 silly idealTree ├── graceful-readlink@1.0.1
+100 silly idealTree ├── har-validator@2.0.6
+100 silly idealTree ├── has-ansi@2.0.0
+100 silly idealTree ├── hawk@3.1.3
+100 silly idealTree ├── hnp@0.0.1
+100 silly idealTree ├── hoek@2.16.3
+100 silly idealTree ├── http-signature@1.1.1
+100 silly idealTree ├── httperror@0.2.3
+100 silly idealTree ├── inherits@2.0.3
+100 silly idealTree ├── is-extendable@0.1.1
+100 silly idealTree ├── is-my-json-valid@2.15.0
+100 silly idealTree ├── is-property@1.0.2
+100 silly idealTree ├── is-typedarray@1.0.0
+100 silly idealTree ├── isarray@1.0.0
+100 silly idealTree ├── isobject@2.1.0
+100 silly idealTree ├── isstream@0.1.2
+100 silly idealTree ├── jodid25519@1.0.2
+100 silly idealTree ├── jsbn@0.1.0
+100 silly idealTree ├── json-bigint@0.1.4
+100 silly idealTree ├── json-schema@0.2.3
+100 silly idealTree ├── json-stringify-safe@5.0.1
+100 silly idealTree ├── jsonparse@1.3.0
+100 silly idealTree ├── jsonpointer@4.0.1
+100 silly idealTree ├── JSONStream@1.0.7
+100 silly idealTree ├── jsprim@1.3.1
+100 silly idealTree ├── lodash.get@4.4.2
+100 silly idealTree ├── lodash@4.17.4
+100 silly idealTree ├── mime-db@1.26.0
+100 silly idealTree ├── mime-types@2.1.14
+100 silly idealTree ├── mkdirp@0.3.5
+100 silly idealTree ├── mp3@0.1.0
+100 silly idealTree ├── ms@0.7.2
+100 silly idealTree ├── nan@2.5.0
+100 silly idealTree ├── node-aplay@1.0.3
+100 silly idealTree ├── oauth-sign@0.8.2
+100 silly idealTree ├── object.omit@2.0.1
+100 silly idealTree ├── object.pick@1.2.0
+100 silly idealTree ├─┬ pcm-boilerplate@0.1.1
+100 silly idealTree │ ├── async@0.2.10
+100 silly idealTree │ └── underscore@1.4.4
+100 silly idealTree ├─┬ pigpio@0.4.0
+100 silly idealTree │ └── nan@2.4.0
+100 silly idealTree ├── pinkie-promise@2.0.1
+100 silly idealTree ├── pinkie@2.0.4
+100 silly idealTree ├── process-nextick-args@1.0.7
+100 silly idealTree ├── punycode@1.4.1
+100 silly idealTree ├── qs@6.3.0
+100 silly idealTree ├── readable-stream@2.0.6
+100 silly idealTree ├── request@2.79.0
+100 silly idealTree ├── sntp@1.0.9
+100 silly idealTree ├─┬ solr-client@0.6.0
+100 silly idealTree │ ├── asn1@0.1.11
+100 silly idealTree │ ├── assert-plus@0.1.5
+100 silly idealTree │ ├── aws-sign2@0.5.0
+100 silly idealTree │ ├── form-data@1.0.1
+100 silly idealTree │ ├── har-validator@1.8.0
+100 silly idealTree │ ├── http-signature@0.11.0
+100 silly idealTree │ ├── node-uuid@1.4.7
+100 silly idealTree │ ├── qs@5.1.0
+100 silly idealTree │ └── request@2.63.0
+100 silly idealTree ├── speaker@0.3.0
+100 silly idealTree ├─┬ sshpk@1.10.2
+100 silly idealTree │ └── assert-plus@1.0.0
+100 silly idealTree ├── string_decoder@0.10.31
+100 silly idealTree ├── string@3.3.3
+100 silly idealTree ├── stringstream@0.0.5
+100 silly idealTree ├── strip-ansi@3.0.1
+100 silly idealTree ├── supports-color@2.0.0
+100 silly idealTree ├── through@2.3.8
+100 silly idealTree ├── tough-cookie@2.3.2
+100 silly idealTree ├── tunnel-agent@0.4.3
+100 silly idealTree ├── tweetnacl@0.14.5
+100 silly idealTree ├── typedarray-to-buffer@3.1.2
+100 silly idealTree ├── underscore@1.8.3
+100 silly idealTree ├── util-deprecate@1.0.2
+100 silly idealTree ├── uuid@3.0.1
+100 silly idealTree ├── vcap_services@0.2.0
+100 silly idealTree ├── verror@1.3.6
+100 silly idealTree ├── watson-developer-cloud@2.15.2
+100 silly idealTree ├─┬ web-audio-api@0.2.2
+100 silly idealTree │ └── async@0.9.2
+100 silly idealTree ├── websocket@1.0.24
+100 silly idealTree ├── xtend@4.0.1
+100 silly idealTree └── yaeti@0.0.6
+101 silly generateActionsToTake Starting
+102 silly install generateActionsToTake
+103 silly generateActionsToTake Finishing
+104 silly diffTrees action count 2
+105 silly diffTrees add nan@2.4.0
+106 silly diffTrees add pigpio@0.4.0
+107 silly decomposeActions action count 16
+108 silly decomposeActions fetch nan@2.4.0
+109 silly decomposeActions extract nan@2.4.0
+110 silly decomposeActions test nan@2.4.0
+111 silly decomposeActions preinstall nan@2.4.0
+112 silly decomposeActions build nan@2.4.0
+113 silly decomposeActions install nan@2.4.0
+114 silly decomposeActions postinstall nan@2.4.0
+115 silly decomposeActions finalize nan@2.4.0
+116 silly decomposeActions fetch pigpio@0.4.0
+117 silly decomposeActions extract pigpio@0.4.0
+118 silly decomposeActions test pigpio@0.4.0
+119 silly decomposeActions preinstall pigpio@0.4.0
+120 silly decomposeActions build pigpio@0.4.0
+121 silly decomposeActions install pigpio@0.4.0
+122 silly decomposeActions postinstall pigpio@0.4.0
+123 silly decomposeActions finalize pigpio@0.4.0
+124 silly executeActions Starting
+125 silly install executeActions
+126 silly doSerial global-install 0
+127 silly doParallel fetch 2
+128 verbose correctMkdir /Users/victordibia/.npm/_locks correctMkdir not in flight; initializing
+129 verbose lock using /Users/victordibia/.npm/_locks/staging-7ff1fa38f4c9e388.lock for /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging
+130 silly doParallel extract 2
+131 silly extract nan@2.4.0
+132 silly extract pigpio@0.4.0
+133 verbose unbuild node_modules/.staging/nan-2271ab4a
+134 verbose unbuild node_modules/.staging/pigpio-c8ad1bd4
+135 silly gentlyRm /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a is being purged from base /Users/victordibia/projects/publicgit/tjdj
+136 verbose gentlyRm don't care about contents; nuking /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a
+137 silly gentlyRm /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4 is being purged from base /Users/victordibia/projects/publicgit/tjdj
+138 verbose gentlyRm don't care about contents; nuking /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4
+139 verbose tar unpack /Users/victordibia/.npm/nan/2.4.0/package.tgz
+140 verbose tar unpacking to /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a
+141 silly gentlyRm /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a is being purged
+142 verbose gentlyRm don't care about contents; nuking /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a
+143 verbose tar unpack /Users/victordibia/.npm/pigpio/0.4.0/package.tgz
+144 verbose tar unpacking to /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4
+145 silly gentlyRm /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4 is being purged
+146 verbose gentlyRm don't care about contents; nuking /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4
+147 silly gunzTarPerm modes [ '755', '644' ]
+148 silly gunzTarPerm modes [ '755', '644' ]
+149 silly gunzTarPerm extractEntry package.json
+150 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+151 silly gunzTarPerm extractEntry package.json
+152 silly gunzTarPerm modified mode [ 'package.json', 436, 420 ]
+153 silly gunzTarPerm extractEntry README.md
+154 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+155 silly gunzTarPerm extractEntry .npmignore
+156 silly gunzTarPerm modified mode [ '.npmignore', 436, 420 ]
+157 silly gunzTarPerm extractEntry README.md
+158 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+159 silly gunzTarPerm extractEntry include_dirs.js
+160 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 420 ]
+161 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+162 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 420 ]
+163 silly gunzTarPerm extractEntry CHANGELOG.md
+164 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 420 ]
+165 silly gunzTarPerm extractEntry LICENSE.md
+166 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 420 ]
+167 silly gunzTarPerm extractEntry LICENSE
+168 silly gunzTarPerm modified mode [ 'LICENSE', 436, 420 ]
+169 silly gunzTarPerm extractEntry pigpio.js
+170 silly gunzTarPerm modified mode [ 'pigpio.js', 436, 420 ]
+171 silly gunzTarPerm extractEntry doc/node_misc.md
+172 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 420 ]
+173 silly gunzTarPerm extractEntry History.md
+174 silly gunzTarPerm modified mode [ 'History.md', 436, 420 ]
+175 silly gunzTarPerm extractEntry doc/asyncworker.md
+176 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 420 ]
+177 silly gunzTarPerm extractEntry doc/callback.md
+178 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 420 ]
+179 silly gunzTarPerm extractEntry example/alert.js
+180 silly gunzTarPerm modified mode [ 'example/alert.js', 436, 420 ]
+181 silly gunzTarPerm extractEntry example/blinky.js
+182 silly gunzTarPerm modified mode [ 'example/blinky.js', 436, 420 ]
+183 silly gunzTarPerm extractEntry doc/converters.md
+184 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 420 ]
+185 silly gunzTarPerm extractEntry doc/errors.md
+186 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 420 ]
+187 silly gunzTarPerm extractEntry example/distance-hc-sr04.js
+188 silly gunzTarPerm modified mode [ 'example/distance-hc-sr04.js', 436, 420 ]
+189 silly gunzTarPerm extractEntry example/gpio-info.js
+190 silly gunzTarPerm modified mode [ 'example/gpio-info.js', 436, 420 ]
+191 silly gunzTarPerm extractEntry doc/maybe_types.md
+192 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 420 ]
+193 silly gunzTarPerm extractEntry doc/methods.md
+194 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 420 ]
+195 silly gunzTarPerm extractEntry example/light-switch.js
+196 silly gunzTarPerm modified mode [ 'example/light-switch.js', 436, 420 ]
+197 silly gunzTarPerm extractEntry example/pulse-led.js
+198 silly gunzTarPerm modified mode [ 'example/pulse-led.js', 436, 420 ]
+199 silly gunzTarPerm extractEntry doc/new.md
+200 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 420 ]
+201 silly gunzTarPerm extractEntry doc/buffers.md
+202 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 420 ]
+203 silly gunzTarPerm extractEntry example/servo.js
+204 silly gunzTarPerm modified mode [ 'example/servo.js', 436, 420 ]
+205 silly gunzTarPerm extractEntry example/distance-hc-sr04.png
+206 silly gunzTarPerm modified mode [ 'example/distance-hc-sr04.png', 436, 420 ]
+207 silly gunzTarPerm extractEntry doc/object_wrappers.md
+208 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 420 ]
+209 silly gunzTarPerm extractEntry doc/persistent.md
+210 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 420 ]
+211 silly gunzTarPerm extractEntry doc/scopes.md
+212 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 420 ]
+213 silly gunzTarPerm extractEntry doc/script.md
+214 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 420 ]
+215 silly gunzTarPerm extractEntry doc/string_bytes.md
+216 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 420 ]
+217 silly gunzTarPerm extractEntry doc/v8_internals.md
+218 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 420 ]
+219 silly gunzTarPerm extractEntry doc/v8_misc.md
+220 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 420 ]
+221 silly gunzTarPerm extractEntry nan.h
+222 silly gunzTarPerm modified mode [ 'nan.h', 436, 420 ]
+223 silly gunzTarPerm extractEntry example/pigpio.png
+224 silly gunzTarPerm modified mode [ 'example/pigpio.png', 436, 420 ]
+225 silly gunzTarPerm extractEntry nan_callbacks.h
+226 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 420 ]
+227 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+228 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 420 ]
+229 silly gunzTarPerm extractEntry nan_converters.h
+230 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 420 ]
+231 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+232 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 420 ]
+233 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+234 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 420 ]
+235 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+236 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 420 ]
+237 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+238 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 420 ]
+239 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+240 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 420 ]
+241 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+242 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 420 ]
+243 silly gunzTarPerm extractEntry nan_new.h
+244 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 420 ]
+245 silly gunzTarPerm extractEntry test/alert-pwm-measurement.js
+246 silly gunzTarPerm modified mode [ 'test/alert-pwm-measurement.js', 436, 420 ]
+247 silly gunzTarPerm extractEntry nan_object_wrap.h
+248 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 420 ]
+249 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+250 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 420 ]
+251 silly gunzTarPerm extractEntry test/do-nothing.js
+252 silly gunzTarPerm modified mode [ 'test/do-nothing.js', 436, 420 ]
+253 silly gunzTarPerm extractEntry test/gpio-mode.js
+254 silly gunzTarPerm modified mode [ 'test/gpio-mode.js', 436, 420 ]
+255 silly gunzTarPerm extractEntry test/gpio-numbers.js
+256 silly gunzTarPerm modified mode [ 'test/gpio-numbers.js', 436, 420 ]
+257 silly gunzTarPerm extractEntry test/isr-enable-disable.js
+258 silly gunzTarPerm modified mode [ 'test/isr-enable-disable.js', 436, 420 ]
+259 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+260 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 420 ]
+261 silly gunzTarPerm extractEntry nan_string_bytes.h
+262 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 420 ]
+263 silly gunzTarPerm extractEntry test/digital-write-performance.js
+264 silly gunzTarPerm modified mode [ 'test/digital-write-performance.js', 436, 420 ]
+265 silly gunzTarPerm extractEntry test/alert-trigger-pulse-measurement.js
+266 silly gunzTarPerm modified mode [ 'test/alert-trigger-pulse-measurement.js', 436, 420 ]
+267 silly gunzTarPerm extractEntry test/isr-timeouts-2.js
+268 silly gunzTarPerm modified mode [ 'test/isr-timeouts-2.js', 436, 420 ]
+269 silly gunzTarPerm extractEntry test/isr-timeouts.js
+270 silly gunzTarPerm modified mode [ 'test/isr-timeouts.js', 436, 420 ]
+271 silly gunzTarPerm extractEntry test/light-switch.js
+272 silly gunzTarPerm modified mode [ 'test/light-switch.js', 436, 420 ]
+273 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+274 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 420 ]
+275 silly gunzTarPerm extractEntry nan_weak.h
+276 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 420 ]
+277 silly gunzTarPerm extractEntry test/notifier-leak-check.js
+278 silly gunzTarPerm modified mode [ 'test/notifier-leak-check.js', 436, 420 ]
+279 silly gunzTarPerm extractEntry test/digital-read-performance.js
+280 silly gunzTarPerm modified mode [ 'test/digital-read-performance.js', 436, 420 ]
+281 silly gunzTarPerm extractEntry test/notifier-pwm.js
+282 silly gunzTarPerm modified mode [ 'test/notifier-pwm.js', 436, 420 ]
+283 silly gunzTarPerm extractEntry test/servo-control.js
+284 silly gunzTarPerm modified mode [ 'test/servo-control.js', 436, 420 ]
+285 silly gunzTarPerm extractEntry tools/package.json
+286 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 420 ]
+287 silly gunzTarPerm extractEntry tools/README.md
+288 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 420 ]
+289 silly gunzTarPerm extractEntry test/notifier-stress.js
+290 silly gunzTarPerm modified mode [ 'test/notifier-stress.js', 436, 420 ]
+291 silly gunzTarPerm extractEntry test/blinky.js
+292 silly gunzTarPerm modified mode [ 'test/blinky.js', 436, 420 ]
+293 silly gunzTarPerm extractEntry test/notifier.js
+294 silly gunzTarPerm modified mode [ 'test/notifier.js', 436, 420 ]
+295 silly gunzTarPerm extractEntry test/blinky-pwm.js
+296 silly gunzTarPerm modified mode [ 'test/blinky-pwm.js', 436, 420 ]
+297 silly gunzTarPerm extractEntry test/pull-up-down.js
+298 silly gunzTarPerm modified mode [ 'test/pull-up-down.js', 436, 420 ]
+299 silly gunzTarPerm extractEntry tools/1to2.js
+300 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 493 ]
+301 silly gunzTarPerm extractEntry test/banked-leds.js
+302 silly gunzTarPerm modified mode [ 'test/banked-leds.js', 436, 420 ]
+303 silly gunzTarPerm extractEntry test/pulse-led.js
+304 silly gunzTarPerm modified mode [ 'test/pulse-led.js', 436, 420 ]
+305 silly gunzTarPerm extractEntry test/alert.js
+306 silly gunzTarPerm modified mode [ 'test/alert.js', 436, 420 ]
+307 silly gunzTarPerm extractEntry test/pwm.js
+308 silly gunzTarPerm modified mode [ 'test/pwm.js', 436, 420 ]
+309 silly gunzTarPerm extractEntry test/isr-multiple-sources.js
+310 silly gunzTarPerm modified mode [ 'test/isr-multiple-sources.js', 436, 420 ]
+311 silly gunzTarPerm extractEntry test/trigger-led.js
+312 silly gunzTarPerm modified mode [ 'test/trigger-led.js', 436, 420 ]
+313 silly gunzTarPerm extractEntry test/isr-performance.js
+314 silly gunzTarPerm modified mode [ 'test/isr-performance.js', 436, 420 ]
+315 silly gunzTarPerm extractEntry test/run-tests
+316 silly gunzTarPerm modified mode [ 'test/run-tests', 509, 493 ]
+317 silly gunzTarPerm extractEntry test/c-interface/blinky.js
+318 silly gunzTarPerm modified mode [ 'test/c-interface/blinky.js', 436, 420 ]
+319 silly gunzTarPerm extractEntry test/c-interface/do-nothing.js
+320 silly gunzTarPerm modified mode [ 'test/c-interface/do-nothing.js', 436, 420 ]
+321 silly gunzTarPerm extractEntry test/c-interface/gpio-write-performance.js
+322 silly gunzTarPerm modified mode [ 'test/c-interface/gpio-write-performance.js', 436, 420 ]
+323 silly gunzTarPerm extractEntry test/c-interface/irq-dynamic.js
+324 silly gunzTarPerm modified mode [ 'test/c-interface/irq-dynamic.js', 436, 420 ]
+325 silly gunzTarPerm extractEntry test/c-interface/irq-handle-2-inputs.js
+326 silly gunzTarPerm modified mode [ 'test/c-interface/irq-handle-2-inputs.js', 436, 420 ]
+327 silly gunzTarPerm extractEntry test/c-interface/irq-performance.js
+328 silly gunzTarPerm modified mode [ 'test/c-interface/irq-performance.js', 436, 420 ]
+329 silly gunzTarPerm extractEntry test/c-interface/irq-watch-unwatch.js
+330 silly gunzTarPerm modified mode [ 'test/c-interface/irq-watch-unwatch.js', 436, 420 ]
+331 silly gunzTarPerm extractEntry test/c-interface/light-switch.js
+332 silly gunzTarPerm modified mode [ 'test/c-interface/light-switch.js', 436, 420 ]
+333 silly gunzTarPerm extractEntry test/c-interface/pwm-pulse-10-leds.js
+334 silly gunzTarPerm modified mode [ 'test/c-interface/pwm-pulse-10-leds.js', 436, 420 ]
+335 silly gunzTarPerm extractEntry test/c-interface/run-tests
+336 silly gunzTarPerm modified mode [ 'test/c-interface/run-tests', 509, 493 ]
+337 silly gunzTarPerm extractEntry binding.gyp
+338 silly gunzTarPerm modified mode [ 'binding.gyp', 436, 420 ]
+339 silly gunzTarPerm extractEntry src/pigpio.cc
+340 silly gunzTarPerm modified mode [ 'src/pigpio.cc', 436, 420 ]
+341 silly gunzTarPerm extractEntry doc/configuration.md
+342 silly gunzTarPerm modified mode [ 'doc/configuration.md', 436, 420 ]
+343 silly gunzTarPerm extractEntry doc/gpio.md
+344 silly gunzTarPerm modified mode [ 'doc/gpio.md', 436, 420 ]
+345 silly gunzTarPerm extractEntry doc/gpiobank.md
+346 silly gunzTarPerm modified mode [ 'doc/gpiobank.md', 436, 420 ]
+347 silly gunzTarPerm extractEntry doc/notifier.md
+348 silly gunzTarPerm modified mode [ 'doc/notifier.md', 436, 420 ]
+349 silly gentlyRm /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a/node_modules is being purged
+350 verbose gentlyRm don't care about contents; nuking /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a/node_modules
+351 silly gentlyRm /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4/node_modules is being purged
+352 verbose gentlyRm don't care about contents; nuking /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4/node_modules
+353 silly doParallel preinstall 2
+354 silly preinstall nan@2.4.0 /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a
+355 info lifecycle nan@2.4.0~preinstall: nan@2.4.0
+356 silly preinstall pigpio@0.4.0 /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4
+357 info lifecycle pigpio@0.4.0~preinstall: pigpio@0.4.0
+358 silly lifecycle nan@2.4.0~preinstall: no script for preinstall, continuing
+359 silly lifecycle pigpio@0.4.0~preinstall: no script for preinstall, continuing
+360 silly doReverseSerial remove 0
+361 silly doSerial move 0
+362 silly doSerial finalize 2
+363 silly finalize /Users/victordibia/projects/publicgit/tjdj/node_modules/pigpio/node_modules/nan
+364 silly finalize /Users/victordibia/projects/publicgit/tjdj/node_modules/pigpio
+365 silly doSerial build 2
+366 silly build nan@2.4.0
+367 info linkStuff nan@2.4.0
+368 silly linkStuff nan@2.4.0 has /Users/victordibia/projects/publicgit/tjdj/node_modules/pigpio/node_modules as its parent node_modules
+369 verbose linkBins nan@2.4.0
+370 verbose linkMans nan@2.4.0
+371 silly build pigpio@0.4.0
+372 info linkStuff pigpio@0.4.0
+373 silly linkStuff pigpio@0.4.0 has /Users/victordibia/projects/publicgit/tjdj/node_modules as its parent node_modules
+374 verbose linkBins pigpio@0.4.0
+375 verbose linkMans pigpio@0.4.0
+376 silly doSerial global-link 0
+377 silly doParallel update-linked 0
+378 silly doSerial install 2
+379 silly install nan@2.4.0 /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/nan-2271ab4a
+380 info lifecycle nan@2.4.0~install: nan@2.4.0
+381 silly lifecycle nan@2.4.0~install: no script for install, continuing
+382 silly install pigpio@0.4.0 /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging/pigpio-c8ad1bd4
+383 info lifecycle pigpio@0.4.0~install: pigpio@0.4.0
+384 verbose lifecycle pigpio@0.4.0~install: unsafe-perm in lifecycle true
+385 verbose lifecycle pigpio@0.4.0~install: PATH: /Users/victordibia/.npm-packages/lib/node_modules/npm/bin/node-gyp-bin:/Users/victordibia/projects/publicgit/tjdj/node_modules/pigpio/node_modules/.bin:/Users/victordibia/projects/publicgit/tjdj/node_modules/.bin:/usr/local/bin:/Users/victordibia/projects/cocos2d/cocos2d-js/tools/cocos2d-console/bin:/Users/victordibia/software/mongodb/bin:/Users/victordibia/.npm-packages/bin:/Users/victordibia/.npm-packages/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/victordibia/software:/opt/oblong/g-speak3.26/bin:/opt/oblong/deps-64-11/bin:/opt/oblong/g-speak3.20/bin:/opt/oblong/deps-64-10/bin
+386 verbose lifecycle pigpio@0.4.0~install: CWD: /Users/victordibia/projects/publicgit/tjdj/node_modules/pigpio
+387 silly lifecycle pigpio@0.4.0~install: Args: [ '-c', 'node-gyp rebuild' ]
+388 silly lifecycle pigpio@0.4.0~install: Returned: code: 1  signal: null
+389 info lifecycle pigpio@0.4.0~install: Failed to exec install script
+390 verbose unlock done using /Users/victordibia/.npm/_locks/staging-7ff1fa38f4c9e388.lock for /Users/victordibia/projects/publicgit/tjdj/node_modules/.staging
+391 silly rollbackFailedOptional Starting
+392 silly rollbackFailedOptional Finishing
+393 silly runTopLevelLifecycles Starting
+394 silly runTopLevelLifecycles Finishing
+395 silly install printInstalled
+396 verbose stack Error: pigpio@0.4.0 install: `node-gyp rebuild`
+396 verbose stack Exit status 1
+396 verbose stack     at EventEmitter.<anonymous> (/Users/victordibia/.npm-packages/lib/node_modules/npm/lib/utils/lifecycle.js:242:16)
+396 verbose stack     at emitTwo (events.js:106:13)
+396 verbose stack     at EventEmitter.emit (events.js:191:7)
+396 verbose stack     at ChildProcess.<anonymous> (/Users/victordibia/.npm-packages/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+396 verbose stack     at emitTwo (events.js:106:13)
+396 verbose stack     at ChildProcess.emit (events.js:191:7)
+396 verbose stack     at maybeClose (internal/child_process.js:852:16)
+396 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
+397 verbose pkgid pigpio@0.4.0
+398 verbose cwd /Users/victordibia/projects/publicgit/tjdj
+399 error Darwin 16.1.0
+400 error argv "/usr/local/bin/node" "/Users/victordibia/.npm-packages/bin/npm" "install" "-save" "pigpio"
+401 error node v6.2.2
+402 error npm  v3.10.5
+403 error code ELIFECYCLE
+404 error pigpio@0.4.0 install: `node-gyp rebuild`
+404 error Exit status 1
+405 error Failed at the pigpio@0.4.0 install script 'node-gyp rebuild'.
+405 error Make sure you have the latest version of node.js and npm installed.
+405 error If you do, this is most likely a problem with the pigpio package,
+405 error not with npm itself.
+405 error Tell the author that this fails on your system:
+405 error     node-gyp rebuild
+405 error You can get information on how to open an issue for this project with:
+405 error     npm bugs pigpio
+405 error Or if that isn't available, you can get their info via:
+405 error     npm owner ls pigpio
+405 error There is likely additional logging output above.
+406 verbose exit [ 1, true ]
