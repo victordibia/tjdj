@@ -1,0 +1,29 @@
+{
+  "name": "tjdj",
+  "version": "1.0.0",
+  "description": "Fun speech-based app to get TJBot playing (and dancing to) song snippets using Watson Apis and the Spotify apis ",
+  "main": "tjdj.js",
+  "scripts": {
+    "test": "node tjdj.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victordibia/tjdj.git"
+  },
+  "keywords": [
+    "tjbot",
+    "watson",
+    "services",
+    "spotify",
+    "robot"
+  ],
+  "author": "Victor Dibia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/victordibia/tjdj/issues"
+  },
+  "homepage": "https://github.com/victordibia/tjdj#readme",
+  "dependencies": {
+    "request": "^2.79.0"
+  }
+}
