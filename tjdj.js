@@ -1,5 +1,6 @@
-// var pigpio = require('pigpio')
-// pigpio.initialize();
+var pigpio = require('pigpio')
+pigpio.initialize();
+
 var config = require('./config');  // gets our username and passwords from the config.js files
 var watson = require('watson-developer-cloud');
 var Sound = require('node-aplay');
@@ -145,6 +146,7 @@ function searchSpotify(searchterm){
         console.log("Found : " + selectedtrack.name, " by " ,trackartists, selectedtrack.popularity)
 
         downloadFile(selectedtrack.preview_url)
+        pauseMic()
       }else{
         console.log("no song found from spotify")
         setLEDColor("red", 255)
@@ -208,7 +210,7 @@ function converttoWav(soundfile){
 
   ls.on('close', (code) => {
     console.log("conversation successful ...")
-    playSound("preview.wav")
+    dance("preview.wav")
   });
 }
 
@@ -263,4 +265,103 @@ function setLEDColor(randColor, brightness){
   color[0] = colorPalette[randColor];
   ws281x.render(color);
   ws281x.setBrightness(brightness);
+}
+
+/*********************************************************************
+* Piece #7: Play a Song and dance to the rythm!
+*********************************************************************
+*/
+var pcmdata = [] ;
+var samplerate ;
+var soundfile = "sounds/club.wav"
+var threshodld = 0 ;
+//decodeSoundFile(soundfile);
+function decodeSoundFile(soundfile){
+  console.log("decoding mp3 file ", soundfile, " ..... ")
+  fs.readFile(soundfile, function(err, buf) {
+    if (err) throw err
+    context.decodeAudioData(buf, function(audioBuffer) {
+      console.log(audioBuffer.numberOfChannels, audioBuffer.length, audioBuffer.sampleRate, audioBuffer.duration);
+      pcmdata = (audioBuffer.getChannelData(0)) ;
+      samplerate = audioBuffer.sampleRate;
+      findPeaks(pcmdata, samplerate);
+      playsound(soundfile);
+    }, function(err) { throw err })
+  })
+}
+
+//dance();
+function dance(soundfile){
+  //speak("Sure. I am decoding a sound file that I will dance to. This may take a couple of seconds.") ;
+  decodeSoundFile(soundfile);
+}
+
+function findPeaks(pcmdata, samplerate, threshold){
+  var interval = 0.05 * 1000 ; index = 0 ;
+  var step = Math.round( samplerate * (interval/1000) );
+  var max = 0 ;   var prevmax = 0 ;  var prevdiffthreshold = 0.3 ;
+
+  //loop through song in time with sample rate
+  var samplesound = setInterval(function() {
+    if (index >= pcmdata.length) {
+      clearInterval(samplesound);
+      console.log("finished sampling sound")
+      iswaving = false ;
+      setLEDColor("white", 255);
+      return;
+    }
+    for(var i = index; i < index + step ; i++){
+      max = pcmdata[i] > max ? pcmdata[i].toFixed(1)  : max ;
+    }
+    // Spot a significant increase? Wave Arm
+    if(max-prevmax >= prevdiffthreshold){
+      waveArm("dance");
+      var colors = Object.keys(colorPalette);
+      var randIdx = Math.floor(Math.random() * colors.length);
+      var randColor = colors[randIdx];
+      setLEDColor( randColor, (max-prevmax) * 255)
+    }
+    prevmax = max ; max = 0 ; index += step ;
+  }, interval,pcmdata);
+}
+
+/**
+* Wave the arm of your robot X times with an interval
+* @return {[type]} [description]
+*/
+function waveArm(action) {
+  iswaving = true ;
+  var Gpio = pigpio.Gpio;
+  var motor = new Gpio(7, {mode: Gpio.OUTPUT});
+  //pigpio.terminate();
+  var times =  8 ;
+  var interval = 700 ;
+
+  if (action == "wave") {
+    var pulse = setInterval(function() {
+      motor.servoWrite(maxcycle);
+      setTimeout(function(){
+        if (motor != null) {
+          motor.servoWrite(mincycle);
+        }
+      }, interval/3);
+
+      if (times-- === 0) {
+        clearInterval(pulse);
+        if (!isplaying) {
+          setTimeout(function(){
+            micInstance.resume();
+            iswaving = false ;
+            setLEDColor("white", 255);
+          }, 500);
+        }
+        return;
+      }
+    }, interval);
+  }else {
+    motor.servoWrite(maxcycle);
+    setTimeout(function(){
+      motor.servoWrite(mincycle);
+    }, 400);
+  }
 }
