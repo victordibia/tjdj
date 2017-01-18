@@ -144,7 +144,13 @@ function searchSpotify(searchterm){
         })
         console.log("Found : " + selectedtrack.name, " by " ,trackartists, selectedtrack.popularity)
 
-        //downloadFile(selectedtrack.preview_url)
+        downloadFile(selectedtrack.preview_url)
+      }else{
+        console.log("no song found from spotify")
+        setLEDColor("red", 255)
+        setTimeout(function(){
+          setLEDColor("white", 255);
+        }, 800);
       }
 
     }else{
