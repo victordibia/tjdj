@@ -26,7 +26,7 @@ var _ = require('underscore');
 var request = require("request") ;
 
 
-var searchterm = "smooth criminal" ;
+var searchterm = "please dont judge me" ;
 var searchtype = "track"
 var options = {
   method: 'GET',
@@ -42,20 +42,30 @@ var options = {
 getSpotify();
 
 function getSpotify(){
+
+
+  var maxpopularity = 0 ;
+  var selectedtrack ;
+  console.log("searching spotify for " + searchterm + " ....");
   request(options, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var result = JSON.parse(body)
       if(result.tracks.items.length > 0) {
-        downloadFile(result.tracks.items[0].preview_url) ; // download preview file
-      }
-      result.tracks.items.forEach(function(track){
-
-        var trackartists = ""
-        track.artists.forEach(function(artist){
-          trackartists = trackartists + artist.name + ", "
+        //downloadFile(result.tracks.items[0].preview_url) ; // download preview file
+        result.tracks.items.forEach(function(track){
+          var trackartists = ""
+          selectedtrack = track.popularity > maxpopularity ? track : selectedtrack ;
+          maxpopularity = track.popularity > maxpopularity ? track.popularity : maxpopularity ;
+          track.artists.forEach(function(artist){
+            trackartists = trackartists + artist.name + ", "
+          })
+          console.log(track.name, " by " ,trackartists, track.popularity)
         })
-        console.log(track.name, " by " ,trackartists, track.popularity)
-      })
+
+        console.log("selected = " + selectedtrack.name)
+        downloadFile(selectedtrack.preview_url)
+      }
+
     }else{
       console.log(error + " error" + response.statusCode)
     }
