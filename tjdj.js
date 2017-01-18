@@ -64,8 +64,8 @@ function getSpotify(){
 
 
 function downloadFile(url){
-  var dest = "preview.mp3"
-  var file = fs.createWriteStream(dest);
+  var destinationfile = "preview.mp3"
+  var file = fs.createWriteStream(destinationfile);
   var donwloadrequest = request.get(url);
 
   // verify response code
@@ -77,17 +77,16 @@ function downloadFile(url){
 
   // check for request errors
   donwloadrequest.on('error', function (err) {
-    fs.unlink(dest);
+    fs.unlink(destinationfile);
   });
   donwloadrequest.pipe(file);
   file.on('finish', function() {
     file.close();
-    //playSound();
-    converttoWav("") ;
+    converttoWav(destinationfile) ;
   });
 
   file.on('error', function(err) { // Handle errors
-    fs.unlink(dest); // Delete the file async. (But we don't check the result)
+    fs.unlink(destinationfile); // Delete the file async. (But we don't check the result)
   });
 }
 
@@ -97,20 +96,21 @@ function downloadFile(url){
 */
 
 const spawn = require('child_process').spawn;
-function converttoWav(inputfile){
-
-  const ls = spawn('mpg321', ['-w','preview.wav', 'preview.mp3']);
+function converttoWav(soundfile){
+  var destination = "preview.wav"
+  console.log("Converting " + soundfile + " to " + destination)
+  const ls = spawn('mpg321', ['-w',destination, soundfile]);
 
   ls.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
+    //console.log(`stdout: ${data}`);
   });
 
   ls.stderr.on('data', (data) => {
-    console.log(`stderr: ${data}`);
+    //console.log(`stderr: ${data}`);
   });
 
   ls.on('close', (code) => {
-    console.log(`child process exited with code ${code}`);
+    //console.log(`child process exited with code ${code}`);
     playSound("preview.wav")
   });
 }
