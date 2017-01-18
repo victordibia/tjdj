@@ -26,7 +26,7 @@ var _ = require('underscore');
 var request = require("request") ;
 
 
-var searchterm = "johnny yemi" ;
+var searchterm = "smooth criminal" ;
 var searchtype = "track"
 var options = {
   method: 'GET',
@@ -99,7 +99,7 @@ const spawn = require('child_process').spawn;
 function converttoWav(soundfile){
   var destination = "preview.wav"
   console.log("Converting " + soundfile + " to " + destination)
-  const ls = spawn('mpg321', ['-w',destination, soundfile]);
+  const ls = spawn('mpg321', ['-w',destination, soundfile, '-g', '50']);
 
   ls.stdout.on('data', (data) => {
     //console.log(`stdout: ${data}`);
@@ -110,7 +110,7 @@ function converttoWav(soundfile){
   });
 
   ls.on('close', (code) => {
-    //console.log(`child process exited with code ${code}`);
+    console.log("conversation successful ...")
     playSound("preview.wav")
   });
 }
