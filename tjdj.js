@@ -111,6 +111,7 @@ function converttoWav(inputfile){
 
   ls.on('close', (code) => {
     console.log(`child process exited with code ${code}`);
+    playSound("preview.wav")
   });
 }
 
