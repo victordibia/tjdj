@@ -99,7 +99,7 @@ function downloadFile(url){
 const spawn = require('child_process').spawn;
 function converttoWav(inputfile){
 
-  const ls = spawn('mpg321', ['preview.mp3', 'preview.wav', '-w']);
+  const ls = spawn('mpg321', ['-w','preview.wav', 'preview.mp3']);
 
   ls.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
