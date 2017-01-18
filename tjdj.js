@@ -95,7 +95,7 @@ function parseText(str){
       setLEDColor("green", 255);
     }
   }else {
-    setLEDColor("red")
+    setLEDColor("red", 255)
     setTimeout(function(){
       setLEDColor("white", 255);
     }, 800);
