@@ -210,7 +210,7 @@ function converttoWav(soundfile){
 
   ls.on('close', (code) => {
     console.log("conversation successful ...")
-    dance("preview.wav")
+    dance(destination)
   });
 }
 
@@ -277,7 +277,7 @@ var soundfile = "sounds/club.wav"
 var threshodld = 0 ;
 //decodeSoundFile(soundfile);
 function decodeSoundFile(soundfile){
-  console.log("decoding mp3 file ", soundfile, " ..... ")
+  console.log("decoding sound file ", soundfile, " ..... ")
   fs.readFile(soundfile, function(err, buf) {
     if (err) throw err
     context.decodeAudioData(buf, function(audioBuffer) {

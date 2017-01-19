@@ -1,6 +1,20 @@
-# tjdj
+# tjdj [Beta - meaning still in development]
 Fun speech-based app to get TJBot playing (and dancing to) song snippets using Watson Apis and the Spotify apis
 
+## How It Works
+- Listen for voice commands containing song name e.g play cry me a river
+- Recognize the word play and then trigger a spotify search for the song name
+- Download the song preview (mp3)
+- Convert to wav format (for decoding and sampling)
+- Play song and dance to it.
+
+
+##Dependencies
+
+This app requires mpg321 to convert an mp3 file to a wav file.
+
+    sudo apt-get update
+    sudo apt-get install mpg321    
 
 ##Running
 

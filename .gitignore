@@ -2,3 +2,4 @@ config.js
 node_modules
 preview.mp3
 npm-debug.log
+.DS_Store
