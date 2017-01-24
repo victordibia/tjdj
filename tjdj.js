@@ -2,7 +2,9 @@ var pigpio = require('pigpio')
 pigpio.initialize();
 
 var config = require('./config'); // gets our username and passwords from the config.js files
-var watson = require('watson-developer-cloud');
+//var watson = require('watson-developer-cloud');
+var stt = require('watson-developer-cloud/speech-to-text/v1'); // set up watson speech to text
+var tts = require('watson-developer-cloud/text-to-speech/v1'); // set up watson text to speech
 var Sound = require('node-aplay');
 var AudioContext = require('web-audio-api').AudioContext
 context = new AudioContext
@@ -16,7 +18,7 @@ In this step, the audio sample (pipe) is sent to "Watson Speech to Text" to tran
 The service converts the audio to text and saves the returned text in "textStream"
 */
 
-var speech_to_text = watson.speech_to_text({
+var speech_to_text = new stt({
     username: config.STTUsername,
     password: config.STTPassword,
     version: config.version
@@ -24,7 +26,8 @@ var speech_to_text = watson.speech_to_text({
 
 var fs = require('fs');
 var exec = require('child_process').exec;
-var text_to_speech = watson.text_to_speech({
+
+var text_to_speech = new tts({
     username: config.TTSUsername,
     password: config.TTSPassword,
     version: 'v1'
