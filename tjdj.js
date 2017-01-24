@@ -145,10 +145,13 @@ function searchSpotify(searchterm) {
 
                 })
                 //get selected track artists
-                selectedtrack.artists.forEach(function(artist) {
-                    trackartists = trackartists + artist.name + ", "
-                })
-                console.log("Found : " + selectedtrack.name, " by ", trackartists, selectedtrack.popularity)
+                if (selectedtrack !== undefined) {
+                    selectedtrack.artists.forEach(function(artist) {
+                        trackartists = trackartists + artist.name + ", "
+                    })
+                    console.log("Found : " + selectedtrack.name, " by ", trackartists, selectedtrack.popularity)
+                }
+
 
                 downloadFile(selectedtrack.preview_url)
                 pauseMic()
