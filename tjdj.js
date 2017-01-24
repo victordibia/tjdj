@@ -200,7 +200,7 @@ function downloadFile(url) {
     donwloadrequest.pipe(file);
     file.on('finish', function() {
         file.close();
-        playsound(destinationfile);
+        dance(destinationfile);
     });
 
     file.on('error', function(err) { // Handle errors
