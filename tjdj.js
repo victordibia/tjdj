@@ -234,7 +234,7 @@ function playsound(soundfile) {
     // });
 
     var destination = "preview.wav"
-    console.log("Converting " + soundfile + " to " + destination)
+    console.log("Playing soundfile " + soundfile)
     const ls = spawn('mpg321', [soundfile, '-g', '50']);
 
     ls.on('close', (code) => {
@@ -302,7 +302,7 @@ function decodeSoundFile(soundfile) {
             pcmdata = (audioBuffer.getChannelData(0));
             samplerate = audioBuffer.sampleRate;
             findPeaks(pcmdata, samplerate);
-            playsound("preview.wav");
+            playsound("preview.mp3");
         }, function(err) {
             throw err
         })
