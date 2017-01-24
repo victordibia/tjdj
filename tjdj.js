@@ -76,9 +76,13 @@ var recognizeparams = {
     //  model: 'en-US_BroadbandModel'  // Specify your language model here
 };
 
+pipeStream();
 
-textStream = micInputStream.pipe(speech_to_text.createRecognizeStream(recognizeparams));
-textStream.setEncoding('utf8');
+function pipeStream() {
+    textStream = micInputStream.pipe(speech_to_text.createRecognizeStream(recognizeparams));
+    textStream.setEncoding('utf8');
+}
+
 textStream.on('data', function(str) {
     console.log(' ===== Speech to Text ===== : ' + str); // print each text we receive
     parseText(str);
@@ -86,7 +90,8 @@ textStream.on('data', function(str) {
 
 textStream.on('error', function(err) {
     console.log(' === Watson Speech to Text : An Error has occurred ===== \nYou may have exceeded your payload quota.'); // handle errors
-    console.log(err + "\n Press <ctrl>+C to exit.");
+    console.log(err + "Attempting to reconnect ..");
+    pipeStream();
 });
 
 
@@ -189,7 +194,7 @@ function downloadFile(url) {
     donwloadrequest.pipe(file);
     file.on('finish', function() {
         file.close();
-        converttoWav(destinationfile);
+        playsound(destinationfile);
     });
 
     file.on('error', function(err) { // Handle errors
