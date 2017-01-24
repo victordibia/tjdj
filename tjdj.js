@@ -222,7 +222,7 @@ function converttoWav(soundfile) {
 
 var isplaying = false;
 
-function playSound(soundfile) {
+function playsound(soundfile) {
     isplaying = true;
     pauseMic();
     music = new Sound(soundfile);
