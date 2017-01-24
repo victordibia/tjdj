@@ -225,9 +225,19 @@ var isplaying = false;
 function playsound(soundfile) {
     isplaying = true;
     pauseMic();
-    music = new Sound(soundfile);
-    music.play();
-    music.on('complete', function() {
+    // music = new Sound(soundfile);
+    // music.play();
+    // music.on('complete', function() {
+    //     console.log('Done with music playback!');
+    //     isplaying = false;
+    //     resumeMic()
+    // });
+
+    var destination = "preview.wav"
+    console.log("Converting " + soundfile + " to " + destination)
+    const ls = spawn('mpg321', [soundfile, '-g', '50']);
+
+    ls.on('close', (code) => {
         console.log('Done with music playback!');
         isplaying = false;
         resumeMic()
