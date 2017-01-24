@@ -292,7 +292,7 @@ function decodeSoundFile(soundfile) {
             pcmdata = (audioBuffer.getChannelData(0));
             samplerate = audioBuffer.sampleRate;
             findPeaks(pcmdata, samplerate);
-            playsound(soundfile);
+            playsound("preview.wav");
         }, function(err) {
             throw err
         })
