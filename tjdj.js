@@ -49,21 +49,8 @@ var micInstance = mic({
     'debug': false,
     'exitOnSilence': 6
 });
-var micInputStream = micInstance.getAudioStream();
+var micInputStream;
 
-micInputStream.on('data', function(data) {
-    //console.log("Recieved Input Stream: " + data.length);
-});
-
-micInputStream.on('error', function(err) {
-    console.log("Error in Input Stream: " + err);
-});
-
-micInputStream.on('silence', function() {
-    // detect silence.
-});
-micInstance.start();
-console.log("TJ is listening, you may speak now.");
 
 /************************************************************************
 * Step #3: Converting your Speech Commands to Text
@@ -72,16 +59,32 @@ In this step, the audio sample is sent (piped) to "Watson Speech to Text" to tra
 The service converts the audio to text and saves the returned text in "textStream"
 */
 
-var recognizeparams = {
-    content_type: 'audio/l16; rate=44100; channels=2',
-    interim_results: true,
-    smart_formatting: true
-    //  model: 'en-US_BroadbandModel'  // Specify your language model here
-};
 
 pipeStream();
 
 function pipeStream() {
+    micInputStream = micInstance.getAudioStream();
+
+    micInputStream.on('data', function(data) {
+        //console.log("Recieved Input Stream: " + data.length);
+    });
+
+    micInputStream.on('error', function(err) {
+        console.log("Error in Input Stream: " + err);
+    });
+
+    micInputStream.on('silence', function() {
+        // detect silence.
+    });
+    micInstance.start();
+    console.log("TJ is listening, you may speak now.");
+    var recognizeparams = {
+        content_type: 'audio/l16; rate=44100; channels=2',
+        interim_results: true,
+        smart_formatting: true
+        //  model: 'en-US_BroadbandModel'  // Specify your language model here
+    };
+
     textStream = micInputStream.pipe(speech_to_text.createRecognizeStream(recognizeparams));
     textStream.setEncoding('utf8');
 }
@@ -98,6 +101,7 @@ textStream.on('error', function(err) {
     console.log(err + "Attempting to reconnect .. in " + reconnectinterval / 1000 + " seconds");
 
     setTimeout(function() {
+        micInstance.stop();
         pipeStream();
     }, reconnectinterval);
 
