@@ -95,7 +95,7 @@ textStream.on('error', function(err) {
     console.log(' === Watson Speech to Text : An Error has occurred ===== \n'); // handle errors
     console.log(err);
     var reconnectinterval = 3000;
-    console.log(err + "Attempting to reconnect .. in " + reconnect / 1000 + " seconds");
+    console.log(err + "Attempting to reconnect .. in " + reconnectinterval / 1000 + " seconds");
 
     setTimeout(function() {
         pipeStream();
