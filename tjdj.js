@@ -101,9 +101,9 @@ textStream.on('error', function(err) {
     console.log(err);
     var reconnectinterval = 3000;
     console.log(err + "Attempting to reconnect .. in " + reconnectinterval / 1000 + " seconds");
-
+    micInstance.stop();
     setTimeout(function() {
-        micInstance.stop();
+
         pipeStream();
     }, reconnectinterval);
 
