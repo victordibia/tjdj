@@ -343,6 +343,10 @@ function findPeaks(pcmdata, samplerate, threshold) {
  * Wave the arm of your robot X times with an interval
  * @return {[type]} [description]
  */
+var mincycle = 500;
+var maxcycle = 2300;
+var dutycycle = mincycle;
+
 function waveArm(action) {
     iswaving = true;
     var Gpio = pigpio.Gpio;
