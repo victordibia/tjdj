@@ -18,11 +18,6 @@ In this step, the audio sample (pipe) is sent to "Watson Speech to Text" to tran
 The service converts the audio to text and saves the returned text in "textStream"
 */
 
-var speech_to_text = new stt({
-    username: config.STTUsername,
-    password: config.STTPassword,
-    version: config.version
-});
 
 var fs = require('fs');
 var exec = require('child_process').exec;
@@ -78,6 +73,13 @@ function pipeStream() {
     });
     micInstance.start();
     console.log("TJ is listening, you may speak now.");
+
+    var speech_to_text = new stt({
+        username: config.STTUsername,
+        password: config.STTPassword,
+        version: config.version
+    });
+
     var recognizeparams = {
         content_type: 'audio/l16; rate=44100; channels=2',
         interim_results: true,
