@@ -152,6 +152,7 @@ function searchSpotify(searchterm) {
             var result = JSON.parse(body)
             if (result.tracks.items.length > 0) {
                 //downloadFile(result.tracks.items[0].preview_url) ; // download preview file
+                selectedtrack = result.tracks.items[0];
                 result.tracks.items.forEach(function(track) {
 
                     selectedtrack = track.popularity > maxpopularity ? track : selectedtrack;
@@ -164,11 +165,12 @@ function searchSpotify(searchterm) {
                         trackartists = trackartists + artist.name + ", "
                     })
                     console.log("Found : " + selectedtrack.name, " by ", trackartists, selectedtrack.popularity)
+                    downloadFile(selectedtrack.preview_url)
+                    pauseMic();
                 }
 
 
-                downloadFile(selectedtrack.preview_url)
-                pauseMic()
+
             } else {
                 console.log("no song found from spotify")
                 setLEDColor("red", 255)
