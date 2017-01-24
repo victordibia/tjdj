@@ -26,6 +26,7 @@
   "dependencies": {
     "mic": "^2.1.1",
     "node-aplay": "^1.0.3",
+    "pigpio": "^0.4.0",
     "request": "^2.79.0",
     "rpi-ws281x-native": "^0.8.1",
     "watson-developer-cloud": "^2.15.2",
