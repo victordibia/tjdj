@@ -2,7 +2,7 @@
 Fun speech-based app to get TJBot playing (and dancing to) song snippets using Watson Apis and the Spotify apis
 
 ## How It Works
-- Listen for voice commands containing song name e.g play cry me a river
+- Listen for voice commands containing song name e.g play {cry me a river}
 - Recognize the word play and then trigger a spotify search for the song name
 - Download the song preview (mp3)
 - Convert to wav format (for decoding and sampling)
@@ -22,10 +22,10 @@ Start the application. (Note: you need sudo access)
 
     sudo node tjdj.js     
 
-Then you should be able to speak to the microphone and ask your TJBot to play a song
+Then you should be able to speak to the microphone and ask your TJBot to play
 
-    play song smooth criminal by michael jackson
-    play song
+    play smooth criminal by michael jackson
+    play stranger in moscow
 
 For the dance command, your robot processes wav files in the sounds folder. Please ensure you have a .wav file there and set that as your sound file.
 
