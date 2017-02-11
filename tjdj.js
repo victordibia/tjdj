@@ -112,9 +112,10 @@ textStream.on('error', function(err) {
 
 function parseText(str) {
     var containsPlay = str.indexOf("play") >= 0;
+    var keyword = "";
     if (containsPlay) {
-        str = str.replace("play", "");
-        str = str.replace("song", "");
+        str = str.replace(keyword, "");
+        //str = str.replace("song", "");
         console.log(" Command : ", str)
         if (str.length > 10) {
             searchSpotify(str);
@@ -174,8 +175,6 @@ function searchSpotify(searchterm) {
                     downloadFile(selectedtrack.preview_url)
                     pauseMic();
                 }
-
-
 
             } else {
                 console.log("no song found from spotify")
