@@ -11,10 +11,13 @@ Fun speech-based app to get TJBot playing (and dancing to) song snippets using W
 
 ##Dependencies
 
-This app requires mpg321 to convert an mp3 file to a wav file.
+This app requires mpg321 to play an mp3 file.
 
     sudo apt-get update
-    sudo apt-get install mpg321    
+    sudo apt-get install mpg321  
+
+Following this, you will need to install node Dependencies
+    npm install
 
 ##Running
 
@@ -26,8 +29,6 @@ Then you should be able to speak to the microphone and ask your TJBot to play
 
     play smooth criminal by michael jackson
     play stranger in moscow
-
-For the dance command, your robot processes wav files in the sounds folder. Please ensure you have a .wav file there and set that as your sound file.
 
 
 Dependencies List

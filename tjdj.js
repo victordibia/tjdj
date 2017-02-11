@@ -249,14 +249,6 @@ var isplaying = false;
 function playsound(soundfile) {
     isplaying = true;
     pauseMic();
-    // music = new Sound(soundfile);
-    // music.play();
-    // music.on('complete', function() {
-    //     console.log('Done with music playback!');
-    //     isplaying = false;
-    //     resumeMic()
-    // });
-
     var destination = "preview.wav"
     console.log("Playing soundfile " + soundfile)
     const ls = spawn('mpg321', [soundfile, '-g', '50']);
